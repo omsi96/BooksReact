@@ -1,7 +1,7 @@
 import { observer } from "mobx-react";
 import React from "react";
 import BookList from "../components/book/BookList";
-import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 import booksStore from "../stores/booksStore";
 const HomePage = () => {
   //   booksStore.fetchBooks();
@@ -9,8 +9,9 @@ const HomePage = () => {
   console.log("Fetched Books: ", booksStore.books);
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
       <BookList title={"Popular Now!"} books={booksStore.books} />
+      <Footer />
     </div>
   );
 };

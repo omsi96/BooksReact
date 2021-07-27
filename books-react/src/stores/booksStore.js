@@ -15,8 +15,12 @@ class BookStore {
   };
   fetchBooks = async () => {
     try {
-      const books = await axios.get("books/");
-      this.books = books.data;
+      const books = await axios.get("books/", {
+        headers: {
+          FLAG: "*** FLAAAAAAAAG {4273}",
+        },
+      });
+      this.books = books.data.books;
       console.log("Got all books:", this.books);
     } catch (error) {
       console.log("Got an error:", error);

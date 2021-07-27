@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BookStyled = styled.div`
   width: 177px;
+  cursor: pointer;
 `;
 export const BookImageStyled = styled.img`
   /* height: 238px; */

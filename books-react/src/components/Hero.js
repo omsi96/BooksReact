@@ -1,6 +1,6 @@
 import { PrimaryButton } from "../styledComponents/Buttons";
 import banner from "../assets/readers-banner.svg";
-
+import { useState } from "react";
 const div1Style = {
   display: "flex",
   flexDirection: "row",
@@ -18,6 +18,7 @@ const div2Style = {
   padding: 50,
   zIndex: -2,
   borderRadius: "10px",
+  pointerEvents: "",
 };
 const imageStyle = {
   height: "200px",
@@ -37,11 +38,13 @@ const Hero = () => {
   return (
     <div style={div1Style}>
       <div style={div2Style}>
-        <div style={col}>
-          <h2 style={headingStyle}>Build your library</h2>
-          <p style={grayText}>Buy two selected books nd get one for free</p>
-          <PrimaryButton>View all</PrimaryButton>
-        </div>
+        <form action="">
+          <div style={col}>
+            <h2 style={headingStyle}>Build your library</h2>
+
+            <PrimaryButton>View all</PrimaryButton>
+          </div>
+        </form>
         <img
           style={{ ...imageStyle, alignSelf: "flex-end" }}
           src={banner}
